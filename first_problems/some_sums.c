@@ -2,8 +2,6 @@
 
 int     rec_sum_digits(int num)
 {
-    int sum;
-
     if (num < 10)
         return num;
     return (num % 10 + rec_sum_digits(num / 10));
@@ -15,7 +13,7 @@ int     main(void)
     int a;
     int b;
     int i = 1;
-    int sum;
+    int sum = 0;
     int sum_digits;
 
     scanf("%d %d %d", &n, &a, &b);
