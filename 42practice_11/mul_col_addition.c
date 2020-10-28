@@ -2,11 +2,11 @@
 
 unsigned int count_digits(unsigned int num)
 {
-    unsigned int digits = 1;
+    int digit = 1;
 
     while (num /= 10)
-        digits++;
-    return (digits);
+        digit++;
+    return (digit);
 }
 
 int main(void)
