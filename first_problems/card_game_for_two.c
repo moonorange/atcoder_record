@@ -27,11 +27,19 @@ int     main(void)
 
     scanf("%d", &n);
     int a[n];
-    int i;
+    int i,j;
+    int ali = 0;
+    int bob = 0;
 
-    for (i=0; i<n; i++)
+    for (i = 0; i < n; i++)
     {
         scanf("%d", &a[i]);
     }
     sort_list(a, n);
+    for (j = n - 1; 0 < j; j--)
+    {
+        ali += a[j];
+        bob += a[j - 1];
+    }
+    printf("%d\n", ali - bob);
 }
