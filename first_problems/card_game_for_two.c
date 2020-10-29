@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include<stdlib.h>
 
 void    sort_list(int *num_list, int len)
 {
@@ -11,7 +10,7 @@ void    sort_list(int *num_list, int len)
     {
         for (j = len - 1; j > i; j--)
         {
-            if (num_list[j] < num_list[j - 1])
+            if (num_list[j] > num_list[j - 1])
             {
                 tmp = num_list[j];
                 num_list[j] = num_list[j - 1];
@@ -36,10 +35,12 @@ int     main(void)
         scanf("%d", &a[i]);
     }
     sort_list(a, n);
-    for (j = n - 1; 0 < j; j--)
+    for (j = 0; j < n; j++)
     {
-        ali += a[j];
-        bob += a[j - 1];
+        if (j % 2 == 0)
+            ali += a[j];
+        else
+            bob += a[j];
     }
     printf("%d\n", ali - bob);
 }
