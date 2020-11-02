@@ -18,8 +18,11 @@ int main(void)
             {
                 if (10000*i + 5000*j + 1000*k == y)
                 {
-                    printf("%d %d %d\n", i, j, k);
-                    return (0);
+                    if (i + j + k == n)
+                    {
+                        printf("%d %d %d\n", i, j, k);
+                        return (0);
+                    }
                 }
                 k++;
             }
