@@ -9,11 +9,11 @@ int main(void)
 {
     int n;
     int i;
-    int array[n];
     int layer = 1;
     int buffer;
 
     scanf("%d", &n);
+    int array[n];
     for (i = 0; i < n; i++)
     {
         scanf("%d", &array[i]);
@@ -23,7 +23,10 @@ int main(void)
     for (i = 0; i < n; i++)
     {
         if (array[i] != buffer)
+        {
             layer++;
+            buffer = array[i];
+        }
     }
     printf("%d\n", layer);
 }
